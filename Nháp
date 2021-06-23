@@ -1,0 +1,98 @@
+<section class="pb-3">
+    <nav class=" sticky pb-2">
+        <div class="row text-dark">
+            <a href="/coordinator"><img src="/resources/img/logo.jpg" alt="missing picture" class="logo">
+                <img src="/resources/img/logo.jpg" alt="missing picture" class="logo-black"></a>
+            <ul class="main-nav " id="navi">
+                <li>
+                    <a href="javascript:void(0);" class="icon-rp" onclick="myFunction()">
+                        <i class="ion-ios-information-circle"></i>
+                    </a>
+                </li>
+
+                <li><a href="/coordinator">Home</a></li>
+
+                <li> <a href="/coordinator/topic">Topic </a> </li>
+                <li> <a href="/coordinator/allArticle">All Article </a> </li>
+                <li> <a href="/coordinator/article">Article </a> </li>
+                <li> <a href="/coordinator/logout">Sign Out </a> </li>
+
+            </ul>
+        </div>
+    </nav>
+</section>
+<%- include('../partials/errorMessage.ejs') %>
+<div class="pt-5">
+    <h2 class="text-dark text-center">All Topic</h2>
+</div>
+
+<section class="centered-search">
+    <h3>Search Topic</h3>
+    <form action="/coordinator/topic" method="GET">
+        <div class="search-css">
+            <input type="text" name="name" value="<%= searchOptions.name %>">
+        </div>
+        <button class="btn btn-full" type="submit">Search</button>
+    </form>
+</section>
+
+
+<div class="p-5 mt-5 mb-5">
+    <table class="table border">
+        
+        <thead>
+            <tr><button class="btn btn-warning"><a href="/coordinator/topic/new" class="text-white">New Topic</a></button></tr>
+
+            <tr class="text-center text-white">
+                <th class="table-name">Name</th>
+                <th class="table-date">Expired Date</th>
+                <th class="table-number">Final Expired Date</th>
+            </tr>
+        </thead>
+        <% topics.forEach(topic=>{ %>
+        <tbody>
+            <tr class="text-center">
+                <td><a href="/coordinator/topic/<%= topic.id %>">
+                    <%= topic.name %>
+                </a></td>
+                <td><%= topic.expiredDate==null ? '' : topic.expiredDate.toISOString().split('T')[0] %></td>
+                <td> <%= topic.finalExpiredDate==null ? '': topic.finalExpiredDate.toISOString().split('T')[0] %></td>
+            </tr>
+        </tbody>
+        <% }) %>
+    </table>
+</div>
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="nav-footer">
+                <li> <a href="#">about us</a> </li>
+                <li> <a href="#">blog</a> </li>
+                <li> <a href="#">Press</a> </li>
+                <li> <a href="#">IOS app</a> </li>
+                <li> <a href="#">ANDROID app</a> </li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-link-footer">
+                <li>
+                    <a href="#"> <i class="ion-logo-facebook"></i> </a>
+                </li>
+                <li>
+                    <a href="#"> <i class="ion-logo-twitter"></i> </a>
+                </li>
+                <li>
+                    <a href="#"> <i class="ion-logo-googleplus"></i> </a>
+                </li>
+                <li>
+                    <a href="#"> <i class="ion-logo-instagram"></i> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            Copyrighted &copy; 2020 by Unipara all rights reversed
+        </p>
+    </div>
+</footer>

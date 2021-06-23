@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="students/css/normalize.css">
+    <link rel="stylesheet" href="students/css/Grid.css">
+    <link rel="stylesheet" href="students/css/ionicons.min.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="resources/css/bt.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <title>Students page</title>
+</head>
+<body>
+    <nav class="row">
+        <img src="resources/img/logo.png" alt="missing picture" class="logo">
+        <ul class="main-nav ">
+            <li> <a href="#" class="text-dark"><b>Home</b></a> </li>
+            <li> <a href="#" class="text-dark"><b>OOOOO</b></a> </li>
+            <li> <a href="#" class="text-dark"><b>Course</b></a> </li>
+            <li> <a href="#" class="text-dark"><b>Profile</b>{account}</a> </li>
+            <li> <a href="#" class="text-dark"><b>Log out</b></a> </li>
+        </ul>
+    </nav>
+    <hr>
+    </section>
+    <div class="pt-5">
+        <h2 class="text-dark text-center">Student page</h2>
+    </div>
+    
+    <section class="centered-search">
+        <form action="/coordinator/topic" method="GET">
+            <div class="search-css pb-5">
+                <input type="text" name="name" value="">
+            </div>
+            <button class="btn btn-full" type="submit">Search</button>
+        </form>
+    </section>
+    
+    
+    <div class="p-5 mt-5 mb-5">
+        <table class="table border">
+            
+            <thead>    
+                <tr class="text-center text-white">
+                    <th class="table-name">Course</th>
+                    <th class="table-date">Teacher</th>
+                    <th class="table-number">Teacher's Email</th>
+                    <th class="table-number">Course Registration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                    <td>{Get from database}</td>
+                    <td>{Get from database}</td>
+                    <td>{Get from database}</td>
+                    <td><a href="">View</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="nav-footer">
+                    <li> <a href="#">about us</a> </li>
+                    <li> <a href="#">blog</a> </li>
+                    <li> <a href="#">Press</a> </li>
+                    <li> <a href="#">IOS app</a> </li>
+                    <li> <a href="#">ANDROID app</a> </li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-link-footer">
+                    <li>
+                        <a href="#"> <i class="ion-logo-facebook"></i> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="ion-logo-twitter"></i> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="ion-logo-googleplus"></i> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="ion-logo-instagram"></i> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                Copyrighted &copy; 2020 by Unipara all rights reversed
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
